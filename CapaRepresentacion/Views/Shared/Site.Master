@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Proyecto2_Noticias.CapaRepresentacion.Views.Shared.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Periódico Virtual InfoWeb</title>
+    <link href="~/Estilos/site.css" rel="stylesheet" />
+    <script src="<%=ResolveUrl("~/JS/app.js") %>"></script>
+    <!--JS Basico para la clase-->
+</head>
+<body>
+    <form id="form1" runat="server">
+            <h1>Biblioteca Virtual</h1>
+        <div class="topbar">
+            <a id="lnkConsultar" runat="server" href="~/libros/consultar">Consultar Libro</a> 
+            <a id="lnkRegistrar" runat="server" href="~/libros/registrar">Registrar Libro</a>
+        </div>
+        <div class="container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" /> 
+        </div>
+        <footer>
+            <p>Hecho por Stiven Chinchilla Zamora – Fecha: <%: DateTime.Now.ToShortDateString() %></p>
+        </footer>
+    </form>
+</body>
+</html>
