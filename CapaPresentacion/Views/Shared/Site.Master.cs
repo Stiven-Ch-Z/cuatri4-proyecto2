@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Proyecto2_Noticias.CapaRepresentacion.Views.Shared
+namespace Proyecto2_Noticias.CapaPresentacion.Views.Shared
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {

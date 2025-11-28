@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Proyecto2_Noticias.CapaRepresentacion.Views.Shared.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Proyecto2_Noticias.CapaPresentacion.Views.Shared.Site" %>
 
 <!DOCTYPE html>
 
