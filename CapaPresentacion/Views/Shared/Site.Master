@@ -1,27 +1,33 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Proyecto2_Noticias.CapaPresentacion.Views.Shared.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Proyecto2_Noticias.CapaPresentacion.Views.Shared.Site" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
     <title>Periódico Virtual InfoWeb</title>
-    <link href="~/Estilos/site.css" rel="stylesheet" />
-    <script src="<%=ResolveUrl("~/JS/app.js") %>"></script>
-    <!--JS Basico para la clase-->
+    <link href="<%= ResolveUrl("~/CapaPresentacion/css/site.css") %>" rel="stylesheet" />
+
 </head>
 <body>
-    <form id="form1" runat="server">
-            <h1>Biblioteca Virtual</h1>
-        <div class="topbar">
-            <a id="lnkConsultar" runat="server" href="~/libros/consultar">Consultar Libro</a> 
-            <a id="lnkRegistrar" runat="server" href="~/libros/registrar">Registrar Libro</a>
-        </div>
+    <form runat="server">
+       <header-master> 
+        <h1>Noticias InfoWeb</h1>
+           <br />
+           <h2>Fecha de hoy: <%: DateTime.Now.ToShortDateString() %></h2>
+           <br />
+           <nav>
+            <a id="lnkInicio" runat="server" href="~/CapaPresentacion/Views/PaginaInicio/NoticiasPublicadas">Inicio</a> 
+            <span>|</span>
+            <a id="lnkAutores" runat="server" href="~/CapaPresentacion/Views/Autores/VistaGeneral">Configuracion de Autores</a>
+            <span>|</span>
+            <a id="lnkCategoria" runat="server" href="~/CapaPresentacion/Views/Categorias/VistaGeneralCategoria">Configuracion de Categorias</a>
+            <span>|</span>
+            <a id="lnkNoticia" runat="server" href="~/CapaPresentacion/Views/NoticiaPrese/VistaGeneralNoticia">Configuracion de Noticias</a>
+            </nav>
+           </header-master>
         <div class="container">
             <asp:ContentPlaceHolder ID="MainContent" runat="server" /> 
         </div>
-        <footer>
-            <p>Hecho por Stiven Chinchilla Zamora – Fecha: <%: DateTime.Now.ToShortDateString() %></p>
-        </footer>
     </form>
 </body>
 </html>

@@ -7,29 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Proyecto2_Noticias.CapaPresentacion.Views.Autores
+namespace Proyecto2_Noticias.CapaPresentacion.Views.Categorias
 {
 
 
-    public partial class VistaGeneral
+    public partial class VistaGeneralCategoria
     {
 
         /// <summary>
-        /// Control gvAutores.
+        /// Control gvCategorias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvAutores;
+        protected global::System.Web.UI.WebControls.GridView gvCategorias;
 
         /// <summary>
-        /// Control btnNuevo.
+        /// Control btnNueva.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnNuevo;
+        protected global::System.Web.UI.WebControls.Button btnNueva;
     }
 }
