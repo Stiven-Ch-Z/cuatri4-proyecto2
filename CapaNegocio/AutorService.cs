@@ -11,36 +11,36 @@ namespace Proyecto2_Noticias.CapaNegocio
 {
     public class AutorService
     {
-        public List<Autor> Listar()
+        public List<Autor> Listar() //este método devuelve una lista de todos los autores
         {
             try
             {
-                using (var context = new NoticieroContext())
+                using (var context = new NoticieroContext()) // crea una instancia del contexto de la base de datos
                 {
                     context.Database.Log = s => Debug.WriteLine(s);
 
 
-                    return context.Autores
-                    .OrderBy(a => a.Nombre)
-                    .ToList();
+                    return context.Autores // se accede al conjunto de Autores en la tabla de la base de datos
+                    .OrderBy(a => a.Nombre) //se ordenan por nombre 
+                    .ToList(); // y se convierten en una lista que se devuelve
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) // captura cualquier excepción que ocurra durante la operación de base de datos
             {
                 string realMessage = ex.InnerException?.InnerException?.Message
-                ?? ex.InnerException?.Message
+                ?? ex.InnerException?.Message //verifica si hay excepciones internas para obtener el mensaje más específico
                 ?? ex.Message;
 
 
-                Debug.WriteLine("Error Listar Autores: " + realMessage);
+                Debug.WriteLine("Error Listar Autores: " + realMessage); // escribe el mensaje de error en la salida de depuración
                 throw new Exception("Listar autores error: " + realMessage, ex);
             }
         }
-        public Autor BuscarPorId(int id)
+        public Autor BuscarPorId(int id) // este mwtodo busca un autor por su ID y devuelve el objeto Autor correspondiente o null si no se encuentra
         {
-            try
+            try // primero intenta ejecutar el bloque de código dentro del try
             {
-                using (var context = new NoticieroContext())
+                using (var context = new NoticieroContext()) 
                 {
                     context.Database.Log = s => Debug.WriteLine(s);
 
@@ -49,7 +49,7 @@ namespace Proyecto2_Noticias.CapaNegocio
                     .FirstOrDefault(a => a.IdAutor == id);
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) //si no puede ejecutar el bloque de código dentro del try, tira la excepción
             {
                 string realMessage = ex.InnerException?.InnerException?.Message
                 ?? ex.InnerException?.Message
@@ -60,7 +60,7 @@ namespace Proyecto2_Noticias.CapaNegocio
                 throw new Exception("BuscarPorId error: " + realMessage, ex);
             }
         }
-        public void Insertar(Autor autor)
+        public void Insertar(Autor autor) // este método inserta un nuevo autor en la base de datos
         {
             try
             {
@@ -69,8 +69,8 @@ namespace Proyecto2_Noticias.CapaNegocio
                     context.Database.Log = s => Debug.WriteLine(s);
 
 
-                    context.Autores.Add(autor);
-                    context.SaveChanges();
+                    context.Autores.Add(autor); // se agrega el autor al conjunto de Autores la tabal de la base de datos
+                    context.SaveChanges(); //se guardan los cambios
                 }
             }
             catch (Exception ex)
@@ -84,7 +84,7 @@ namespace Proyecto2_Noticias.CapaNegocio
                 throw new Exception("Insertar error: " + realMessage, ex);
             }
         }
-        public void Actualizar(Autor autor)
+        public void Actualizar(Autor autor) // este método actualiza un autor existente en la base de datos
         {
             try
             {
@@ -93,8 +93,8 @@ namespace Proyecto2_Noticias.CapaNegocio
                     context.Database.Log = s => Debug.WriteLine(s);
 
 
-                    context.Entry(autor).State = EntityState.Modified;
-                    context.SaveChanges();
+                    context.Entry(autor).State = EntityState.Modified; //marca la entidad autor como modificada en el contexto de la base de datos
+                    context.SaveChanges(); //y se guardan los cambios realizados
                 }
             }
             catch (Exception ex)
@@ -108,7 +108,7 @@ namespace Proyecto2_Noticias.CapaNegocio
                 throw new Exception("Actualizar error: " + realMessage, ex);
             }
         }
-        public void Eliminar(int id)
+        public void Eliminar(int id) // este método elimina un autor de la base de datos por su ID
         {
             try
             {
@@ -117,11 +117,11 @@ namespace Proyecto2_Noticias.CapaNegocio
                     context.Database.Log = s => Debug.WriteLine(s);
 
 
-                    var autor = context.Autores.Find(id);
-                    if (autor != null)
+                    var autor = context.Autores.Find(id);//se busca el autor por su ID
+                    if (autor != null) //si se encuentra el autor, se elimina de la base de datos
                     {
                         context.Autores.Remove(autor);
-                        context.SaveChanges();
+                        context.SaveChanges(); //y se guardan los cambios
                     }
                 }
             }

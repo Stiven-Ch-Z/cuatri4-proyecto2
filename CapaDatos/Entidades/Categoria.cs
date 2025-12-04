@@ -7,7 +7,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Proyecto2_Noticias.CapaDatos.Entidades
 {
-    [Table("Categoria")]
+    // eentidad de categoría que representa las categorías de noticias en la base de datos
+    [Table("Categorias")]
     public class Categoria
     {
         [Key]
@@ -25,6 +26,6 @@ namespace Proyecto2_Noticias.CapaDatos.Entidades
         public string Descripcion { get; set; }
 
 
-        public virtual ICollection<Noticia> Noticias { get; set; }
+        public virtual ICollection<Noticia> Noticias { get; set; } // Relación uno a muchos con Noticias
     }
 }

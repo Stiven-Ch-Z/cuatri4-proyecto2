@@ -7,56 +7,38 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Proyecto2_Noticias.CapaPresentacion.Views.Shared
+namespace Proyecto2_Noticias.CapaPresentacion.Views.PaginaInicio
 {
 
 
-    public partial class Site
+    public partial class NoticiasPublicadas
     {
 
         /// <summary>
-        /// Control lnkInicio.
+        /// Control ddlAutor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkInicio;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAutor;
 
         /// <summary>
-        /// Control lnkAutores.
+        /// Control ddlCategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkAutores;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
 
         /// <summary>
-        /// Control lnkCategoria.
+        /// Control gvNoticias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkCategoria;
-
-        /// <summary>
-        /// Control lnkNoticia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lnkNoticia;
-
-        /// <summary>
-        /// Control MainContent.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.GridView gvNoticias;
     }
 }

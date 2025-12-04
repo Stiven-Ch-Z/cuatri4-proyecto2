@@ -128,8 +128,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="CapaPresentacion\css\imagenes\fondoca.jpg" />
+    <Content Include="CapaPresentacion\css\imagenes\fondogv.jpg" />
+    <Content Include="CapaPresentacion\css\imagenes\fondohe.jpg" />
+    <Content Include="CapaPresentacion\css\imagenes\fondope.jpg" />
+    <Content Include="CapaPresentacion\css\site.css" />
     <Content Include="CapaPresentacion\Views\Autores\Crear.aspx" />
     <Content Include="CapaPresentacion\Views\Autores\VistaGeneral.aspx" />
+    <Content Include="CapaPresentacion\Views\Categorias\CrearCategoria.aspx" />
+    <Content Include="CapaPresentacion\Views\Categorias\VistaGeneralCategoria.aspx" />
+    <Content Include="CapaPresentacion\Views\NoticiaPrese\CrearNoticias.aspx" />
+    <Content Include="CapaPresentacion\Views\NoticiaPrese\VistaGeneralNoticia.aspx" />
+    <Content Include="CapaPresentacion\Views\PaginaInicio\NoticiasPublicadas.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -226,8 +236,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CapaDatos\Entidades\Autor.cs" />
     <Compile Include="CapaDatos\Entidades\Categoria.cs" />
+    <Compile Include="CapaDatos\Entidades\Noticia.cs" />
     <Compile Include="CapaDatos\NoticieroContext.cs" />
     <Compile Include="CapaNegocio\AutorService.cs" />
+    <Compile Include="CapaNegocio\CategoryService.cs" />
+    <Compile Include="CapaNegocio\NoticiaService.cs" />
     <Compile Include="CapaPresentacion\Views\Autores\Crear.aspx.cs">
       <DependentUpon>Crear.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -241,6 +254,41 @@
     </Compile>
     <Compile Include="CapaPresentacion\Views\Autores\VistaGeneral.aspx.designer.cs">
       <DependentUpon>VistaGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\Categorias\CrearCategoria.aspx.cs">
+      <DependentUpon>CrearCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\Categorias\CrearCategoria.aspx.designer.cs">
+      <DependentUpon>CrearCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\Categorias\VistaGeneralCategoria.aspx.cs">
+      <DependentUpon>VistaGeneralCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\Categorias\VistaGeneralCategoria.aspx.designer.cs">
+      <DependentUpon>VistaGeneralCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\NoticiaPrese\CrearNoticias.aspx.cs">
+      <DependentUpon>CrearNoticias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\NoticiaPrese\CrearNoticias.aspx.designer.cs">
+      <DependentUpon>CrearNoticias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\NoticiaPrese\VistaGeneralNoticia.aspx.cs">
+      <DependentUpon>VistaGeneralNoticia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\NoticiaPrese\VistaGeneralNoticia.aspx.designer.cs">
+      <DependentUpon>VistaGeneralNoticia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\PaginaInicio\NoticiasPublicadas.aspx.cs">
+      <DependentUpon>NoticiasPublicadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Views\PaginaInicio\NoticiasPublicadas.aspx.designer.cs">
+      <DependentUpon>NoticiasPublicadas.aspx</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\Views\Shared\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -292,8 +340,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="CapaPresentacion\Controllers\" />
-    <Folder Include="CapaPresentacion\Estilos\" />
-    <Folder Include="CapaPresentacion\JS\" />
+    <Folder Include="CapaPresentacion\js\" />
     <Folder Include="CapaPresentacion\Models\" />
   </ItemGroup>
   <ItemGroup>
